@@ -77,6 +77,9 @@ const newString=new String("     saurabh     ");
         // console.log(address.split(" "));
         // output -['gautam', 'buddha', 'nagar', 'mati', 'road', 'akbarpur']
 
+//endsWith()-- gives boolean result
+const testString="The capital of India is New Delhi."
+console.log(testString.endsWith("it",10));
 
 
 

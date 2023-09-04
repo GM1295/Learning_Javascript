@@ -102,7 +102,7 @@ console.log(`maximum value in array is ${Math.max(1,2,-3,5,78,0,-90)}`); */
     {
         console.log(`random number from ${min} to ${max}`)
         for(let i=1;i<=20;i++)
-         console.log(Math.floor((Math.random()*(max-min+1))));
+         console.log(Math.floor((Math.random()*(max-min+1)))+min);
 
 
     }

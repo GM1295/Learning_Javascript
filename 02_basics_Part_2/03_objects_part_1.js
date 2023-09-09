@@ -1,6 +1,6 @@
 console.log("INVESTIGATIVE STUDY ABOUT OBJECTS");
 
-//there is a concept of singleton for objects in array
+//there is a concept of singleton  objects 
 //whenever object as literal bnta hai to singleton ni bnta hai
 
 // objects are also declared using constructor Object.create

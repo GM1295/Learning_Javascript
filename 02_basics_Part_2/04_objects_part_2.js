@@ -5,10 +5,17 @@
         const tinderUser2=new Object(); //singelton object, declared using constructor
         const tinderUser={}//non-singleton object, declared as literal
          
+
+  
+        // tinderUser2.id="GM1295";
+        // tinderUser2.name="saurabh"
+        // tinderUser2.isLoggedIn=false;
+        // console.log("tinderUser2",tinderUser2);
+
         tinderUser.id="GM1295";
         tinderUser.name="saurabh"
         tinderUser.isLoggedIn=false;
-       // console.log(tinderUser); 
+       //console.log(tinderUser); 
 
 
 //2- below nesting of objects means object within object within object
@@ -51,17 +58,60 @@
 
         }
 
-        console.log(Object.keys(phonepeUser));
+        //console.log(Object.keys(phonepeUser));
         //outputs array of all the keys of object phonepeUser
         // ['name', 'isLoggedIn', 'email', 'upi']
 
-        console.log(Object.values(phonepeUser));
+       // console.log(Object.values(phonepeUser));
         //outputs array of all the values of object phonepeUser
         //['saurabh', false, 'saurabh.d.0102@gmail.com', '786@ybl']
         
-        console.log(Object.entries(phonepeUser));
+        //console.log(Object.entries(phonepeUser));
         //it gives array that contain each key:value pair as an array
         //[ [ 'name', 'saurabh' ], [ 'isLoggedIn', false ], [ 'email', 'saurabh.d.0102@gmail.com' ], [ 'upi', '786@ybl' ]]
 
-        console.log(phonepeUser.hasOwnProperty('contact'));
+        //console.log(phonepeUser.hasOwnProperty('contact'));
         // tells you whether this property exists or not
+
+
+
+
+        //***************object destructuring *************/ 
+
+        //console.log("object destructuring");
+
+
+        const course={
+            courseName:'javascript in hindi',
+            price:"999",
+            courseInstructor:"Michale jordan"
+        }
+
+        //const {courseInstructor}=course;
+        const {courseInstructor:instructor}=course
+        console.log(instructor);
+
+
+        //JSON is basically javascript object notataion
+        //data can be in object or in array 
+
+              /*  
+               {
+                    "name":"saurabh",
+                    "email":"saurabh.d.0102@gmail.com",
+                    "contact":"8770954042",
+                    "location":"raipur",
+                } 
+                */
+
+               /*  
+
+               [
+                    {},
+                    {},
+                    {}
+                ]  
+
+                 */    
+                
+                //above data in curly braces in json

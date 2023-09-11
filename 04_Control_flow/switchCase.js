@@ -12,7 +12,7 @@ console.log("Concept : switchCase\n");
 //                 break;
 
 // }
- const month=3 // here value of month could be any type like string
+ const month=3// here value of month could be any type like string
               // accordingly case values bhi change hongi 
 switch(month)
 {
@@ -26,7 +26,7 @@ switch(month)
     
  case 3:
     console.log("March");
-    break;
+   // break;
     
  case 4:
     console.log("April");

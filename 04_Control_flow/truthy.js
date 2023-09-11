@@ -1,5 +1,5 @@
 /*   const userEmail="hitesh@gmail.com";
-if(userEmail)
+if(userEmail) // here userEmail has a string therfore boolean euivalent is true
 console.log("got user email");
 else 
 console.log("dont have user email"); */
@@ -46,7 +46,7 @@ const userDetail={
 */
 
 
-//NUllish Coalescing Operator ??
+//NUllish Coalescing Operator (??) : null undefined
 
 const schoolUsers={
         name:"saurabh",
@@ -61,6 +61,7 @@ const schoolUsers={
 
         //falsy values-- "",0,false, null , undefined
         //nullish values --null,undefined
+        welcomeMessage:function(msg){return (`hi ${this.name} ,${msg}`);}
  }
 
  /*
@@ -83,9 +84,10 @@ console.log(schoolUsers.hasAvailedReservation||"didn't opt for reservation") */
 
 //  console.log(schoolUsers.marks??"didn;t appear for exam");
 
+
 //  console.log(schoolUsers.hasMedals??"don't have any medals");
 
-// console.log(schoolUsers.mathsOlympiadQualified??"hasn't given any olympiad ")
+ console.log(schoolUsers.mathsOlympiadQualified??schoolUsers.welcomeMessage("how have you been"))
 // console.log(schoolUsers.hasAvailedReservation??"didn't opt for reservation")
 
 //ternary operator
@@ -96,4 +98,4 @@ const num1=12;
 const num2=10;
 //   ((num1+num2)/2)>0?console.log("avg is positive"):console.log("avg is negative");
   const avg=num1>num2?num1:num2;
-  console.log(avg);
+  //console.log(avg);

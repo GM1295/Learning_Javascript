@@ -2,12 +2,14 @@
 
 const myNums=[1,2,3,4,5]
 
-let result=myNums.reduce(function(acc,curr){
+let result=myNums.reduce(function(acc,curr)
+{
     console.log(`acc : ${acc} and curr : ${curr}`);
+    return acc+curr// ye value return hoke acc me save hoti hai each iteration pe
 
-},0)
+},10)
 // console.log(result);
- result=myNums.reduce((acc,curr)=>acc+curr,0)
+ result=myNums.reduce((acc,curr)=>acc+curr,0)//in each iteration acc+curr ka sum waps se acc me save ho jaat hai
  console.log(result);
 
  const shoppingCart=[

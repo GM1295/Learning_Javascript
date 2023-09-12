@@ -9,7 +9,7 @@
 
             /*   const arr=[1,2,3,4,5]
                 for (const loopvar of arr) 
-                {console.log(loopvar);} 
+                {console.log(loopvar);} // print elements
                 
          
 
@@ -41,14 +41,15 @@
               } */
 
 
-      // in objects
+      // in objects--> objects are not iterable using for-of loop 
 
-       /*  const myObject={name:"saurabh",age:37}
-        for (const [key,values] of myObject) //throw error that myObject is not iterable
+        const myObject={name:"saurabh",age:37}
+        for (const key of myObject) //throw error that myObject is not iterable
         {
-            console.log(key,':-',values);
+            console.log(myObject[key]);
             
-        } */
+        }
+
 
 
           

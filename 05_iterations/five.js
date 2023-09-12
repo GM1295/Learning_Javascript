@@ -71,6 +71,7 @@
 
           let bookList=books.filter((bk)=>bk.genre==='history')
           bookList=books.filter((bk)=>{return bk.genre==='history'&&bk.publish<=1999})
+          //curly braces means you have opened the scope therefore explicitly return krna padta hai
 
           bookList=books.filter((bk)=>{return bk.genre==='fiction'&&bk.publish<=2023})
 

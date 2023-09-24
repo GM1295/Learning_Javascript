@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    //Editing
+       
+       // 1. adding element using function
+
+            function addListItem(language)
+            {
+                    const newListItem=document.createElement('li');
+                    
+                    //newListItem.innerHTML="python" //unoptmised operation
+
+                            //OR
+                            
+                    newListItem.appendChild(document.createTextNode(language)); //optimised operation
+
+                    document.querySelector('.languages').appendChild(newListItem);
+            }
+
+           addListItem("C language")
+           addListItem("C#")
+           addListItem("ruby on rails")
+
+     // 2. replacing list element
+
+      let newListItem=document.createElement('li')
+
+        //newListItem.innerText="data scientist"
+                    //OR
+      newListItem.appendChild(document.createTextNode('data scientist'))
+
+     const secongLanguage=document.querySelector('li:nth-child(2)') //selecting which item to be replaced
+
+       secongLanguage.replaceWith(newListItem)
+          
+
+     // 3. modifying the outerHTML/innerHTML/innerText/textContent of a list item
+
+
+         const firstLanguage=document.querySelector('li:first-child')
+         firstLanguage.outerHTML="<li>typescript</li>"
+
+     // 4. removing elements
+
+         const lastLanguage=document.querySelector('li:last-child')
+         lastLanguage.remove();
+
+</script>
+
+</html>

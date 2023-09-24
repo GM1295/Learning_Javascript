@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Part 2</title>
+</head>
+<body style="background-color: #212122; color: #fff;">
+<div class="parent" >
+    
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+</div>
+</body>
+
+
+<script>
+    const parent=document.querySelector('.parent')
+   /*  console.log(parent.children);
+    console.log(parent.children[1]);
+    // console.log(parent.children[1].innerHTML);
+    for (let index = 0; index < parent.children.length; index++) 
+    {
+       console.log(parent.children[index].innerHTML); 
+    }
+
+    parent.children[1].style.color="orange" */
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);de
+    // console.log(parent.children[1]);
+
+    const childOne=document.querySelector('.day')
+    // console.log(childOne.parentElement);
+    // console.log(childOne.nextElementSibling);
+    
+    console.log('Nodes : ',parent.childNodes);//give a node list in which
+    //even a line break is an element
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Events in javascript</h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    const printTable=function(){ for(let i=1;i<=10;i++)
+                        console.log(`2 * ${i} = ${2*i} `); }
+
+    const changeText=function(){
+        
+                let h1tag=document.querySelector('h1')
+                h1tag.innerText="setTimeout() in javascript"
+                console.log("hello");
+    }
+
+  const timeoutId_1= setTimeout(changeText,2000) // taking reference of setTimeout()
+    // clearTimeout(timeoutId_1) // this will immediately stop exection of setTimeout()
+
+       
+      
+      // below code will stop execution on some event 
+
+      const stopSetTimeout=()=>{clearTimeout(timeoutId)
+                console.log('STOPPED');}
+   //document.querySelector('#stop').addEventListener('click',stopSetTimeout)
+
+                // OR
+   document.querySelector('#stop').addEventListener('click',()=>{clearTimeout(timeoutId_1)
+                console.log('STOPPED')})
+               
+ 
+
+</script>
+</html>

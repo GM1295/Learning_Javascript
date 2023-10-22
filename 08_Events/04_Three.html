@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Events in javascript part 2</h1>
+    <button id="start" >Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+
+//passing function to setInterval() and taking its reference
+        let variable=1;
+        let intervalId;
+        const funRef=()=>{
+            intervalId=setInterval(()=>{console.log(`2 * ${variable} = ${2*variable}`);
+            variable+=1;},1000)
+        }
+
+
+// assigning execution of setTimeout() on click event on start button             
+            document.querySelector('#start').
+            addEventListener('click',funRef)
+
+
+// assigning clearInterval() execution to stop button
+            document.querySelector('#stop').
+            addEventListener('click',()=>{
+                clearInterval(intervalId);
+                console.log(`STOPPED`);
+            })
+            
+</script>
+</html>

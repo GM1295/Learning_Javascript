@@ -14,26 +14,47 @@
 </body>
 <script>
 
-//passing function to setInterval() and taking its reference
-        let variable=1;
-        let intervalId;
-        const funRef=()=>{
-            intervalId=setInterval(()=>{console.log(`2 * ${variable} = ${2*variable}`);
-            variable+=1;},1000)
-        }
+// 1- on clicking stop button on page setInterval() ka execution stop ho jaaye
+
+/*   
+let variable=1;
+       const intervalId=setInterval(()=>{console.log(` 2 * ${variable} = ${variable*2}`);
+        variable+=1},1000)
+        
+
+        document.querySelector('#stop').
+                addEventListener('click',()=>{
+                    clearInterval(intervalId);
+                    console.log(`STOPPED`);
+                })
+
+ */
+
+// 2- on clicking start button setInterval() should start execution
+   // on clicking stop button clearInterval() should execute
 
 
-// assigning execution of setTimeout() on click event on start button             
-            document.querySelector('#start').
-            addEventListener('click',funRef)
+/*
+   //passing function to setInterval() and taking its reference
+            let variable=1;
+            let intervalId;
+            const funRef=()=>{
+                intervalId=setInterval(()=>{console.log(`2 * ${variable} = ${2*variable}`);
+                variable+=1;},1000)
+            }
 
 
-// assigning clearInterval() execution to stop button
-            document.querySelector('#stop').
-            addEventListener('click',()=>{
-                clearInterval(intervalId);
-                console.log(`STOPPED`);
-            })
-            
+    // assigning execution of setTimeout() on click event on start button             
+                document.querySelector('#start').
+                addEventListener('click',funRef)
+
+
+    // assigning clearInterval() execution to stop button
+                document.querySelector('#stop').
+                addEventListener('click',()=>{
+                    clearInterval(intervalId);
+                    console.log(`STOPPED`);
+                })
+ */            
 </script>
 </html>

@@ -3,41 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>sample Practice</title>
 </head>
 <body>
-    <h1>Events in javascript</h1>
-    <button id="stop">Stop</button>
-
+    <h1>Sample practice of events in javascript</h1>
+    <button id="stop_1">Stop_1</button>
+    <button id="stop_2">Stop_2</button>
 </body>
 <script>
-    const printTable=function(){ for(let i=1;i<=10;i++)
-                        console.log(`2 * ${i} = ${2*i} `); }
+    
+    // EXAMPLE NO 1
 
-    const changeText=function(){
-        
-                let h1tag=document.querySelector('h1')
-                h1tag.innerText="setTimeout() in javascript"
-                console.log("hello");
-    }
+            // defining a function that will alter innerText of H1 tag
+            function changeMe()
+            {document.querySelector('h1').innerText="Events in Javascript"}
 
-  const timeoutId_1= setTimeout(changeText,2000) // taking reference of setTimeout()
-    // clearTimeout(timeoutId_1) // this will immediately stop exection of setTimeout()
+            // calling Timeout() and taking its reference
+                const Id_1= setTimeout(changeMe,2000)
+            
+            //passing a handler/callback i.e a function on event click
+            // to stop the execution of setTimeout()    
+                document.querySelector('#stop').
+                addEventListener('click',function(){
+                    clearTimeout(Id_1);
+                    console.log(`Stopped setTimout() with Id_1`);
+                })
 
-       
-      
-      // below code will stop execution on some event 
+  //EXAMPLE NO 2
 
-      const stopSetTimeout=()=>{clearTimeout(timeoutId)
-                console.log('STOPPED');}
-   //document.querySelector('#stop').addEventListener('click',stopSetTimeout)
+   //calling setTimeout() and taking its reference
+   const Id_2= setTimeout(()=>{console.log(`hello events in javascript`);},4000)
 
-                // OR
-   document.querySelector('#stop').addEventListener('click',()=>{clearTimeout(timeoutId_1)
-                console.log('STOPPED')})
-               
- 
+   //calling clearTimeout() and taking its reference
+  const stopTimeout_1=()=>{clearTimeout(Id_2);
+      console.log("stopped setTimeout() with Id_2");}
 
+      //passing the reference of clearTimeout() on eventlistener
+      document.querySelector('#stop_2').
+      addEventListener('click',stopTimeout_1)
+  
 </script>
 </html>
